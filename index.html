@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+    <link href="manifest.json">
+    <script src="index.js"></script>
 
     <style>
 body {
@@ -88,7 +90,6 @@ body {
             </div>
     
             <div class="botoes">
-                <!-- Corrigi o href para # para não redirecionar antes do login -->
                 <a href="#" class="btn-entrar" style="font-family:'Anton', sans-serif; font-size: larger;">ENTRAR</a>
                 <a href="#" class="btn-cadastrar" style="font-family:'Anton', sans-serif; font-size: larger; margin-top:10px;">CADASTRAR</a>
             </div>
@@ -118,7 +119,7 @@ body {
     const botaoEntrar = document.querySelector(".btn-entrar");
     const botaoCadastrar = document.querySelector(".btn-cadastrar");
   
-    // LOGIN
+
     botaoEntrar.addEventListener("click", (e) => {
       e.preventDefault();
       const email = emailInput.value;
@@ -139,7 +140,6 @@ body {
         });
     });
   
-    // CADASTRO
     botaoCadastrar.addEventListener("click", (e) => {
       e.preventDefault();
       const email = emailInput.value;
