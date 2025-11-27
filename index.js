@@ -1,7 +1,6 @@
-index
 if ("serviceWorker" in navigator) {
     console.log("Service Worker is supported");
-navigator.serviceWorker
+navigator.serviceWorker.register("sw.js")
 .then(objtQueRepORegistro =>
     console.log(objtQueRepORegistro)
 );
