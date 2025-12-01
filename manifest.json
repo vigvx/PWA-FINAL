@@ -1,6 +1,7 @@
 {"name" : "Cartas Yu Gi OH ",
     "short_name": "Cards",
-    "start_url": "atv-display.pedrovigar.html",
+    "start_url": "/PWA-FINAL/index.html"
+    "start_url": "/PWA-FINAL/atv-display.pedrovigar.html",
     "display": "standalone",
     "background_color": "#483D8B",
     "theme_color": "#483D8B",
@@ -18,3 +19,4 @@
         }
     ]
 }
+
