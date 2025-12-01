@@ -1,33 +1,7 @@
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("sw.js", { scope: "./" })
-      .then((registration) => {
-        let serviceWorker;
-
-        if (registration.installing) {
-          serviceWorker = registration.installing;
-        } else if (registration.waiting) {
-          serviceWorker = registration.waiting;
-        } else if (registration.active) {
-          serviceWorker = registration.active;
-        }
-
-        if (serviceWorker) {
-          serviceWorker.addEventListener("statechange", (e) => {
-            console.log("SW state changed to:", e.target.state);
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("Erro ao registrar o Service Worker:", error);
-      });
-} else {
-  alert("Este navegador não suporta Service Worker.");
-}
-
 const CACHE_NAME = "pwa-cache-v1";
 const urlsToCache = [
     "/PWA-FINAL/index.html",
+    "/PWA-FINAL/atv-display.pedrovigar.html",
     "/PWA-FINAL/manifest.json",
     "/PWA-FINAL/logo.png",
     "/PWA-FINAL/drgbranco.png",
