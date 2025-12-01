@@ -1,10 +1,5 @@
 if ("serviceWorker" in navigator) {
-    console.log("Service Worker is supported");
-navigator.serviceWorker.register("sw.js")
-.then(objtQueRepORegistro =>
-    console.log(objtQueRepORegistro)
-);
-    
-}else {
-   alert("Service Worker is not supported");
+  navigator.serviceWorker.register("/PWA-FINAL/sw.js")
+  .then(res => console.log("SW registrado:", res))
+  .catch(err => console.log("Erro ao registrar SW:", err));
 }
