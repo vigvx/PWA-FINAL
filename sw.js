@@ -1,7 +1,6 @@
 const CACHE_NAME = "pwa-cache-v1";
 const urlsToCache = [
     "/PWA-FINAL/index.html",
-    "/PWA-FINAL/atv-display.pedrovigar.html",
     "/PWA-FINAL/manifest.json",
     "/PWA-FINAL/logo.png",
     "/PWA-FINAL/drgbranco.png",
@@ -17,7 +16,7 @@ const urlsToCache = [
 self.addEventListener("install", (event) => {
     event.waitUntil(
         caches.open(CACHE_NAME).then((cache) => {
-            console.log("Opened cache");
+            console.log("Cache aberto e arquivos adicionados");
             return cache.addAll(urlsToCache);
         })
     );
@@ -25,11 +24,13 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("activate", (event) => {
     const cacheWhitelist = [CACHE_NAME];
+
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(
                 cacheNames.map((cacheName) => {
                     if (!cacheWhitelist.includes(cacheName)) {
+                        console.log("Cache antigo removido:", cacheName);
                         return caches.delete(cacheName);
                     }
                 })
@@ -45,3 +46,4 @@ self.addEventListener("fetch", (event) => {
         })
     );
 });
+
