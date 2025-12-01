@@ -1,119 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Display</title>
 
-    <!-- Corrigindo o link do manifest -->
-    <link rel="manifest" href="/PWA-FINAL/manifest.json">
+    <link href="/PWA-FINAL/manifest.json">
     <script src="/PWA-FINAL/index.js"></script>
 
     <style>
-      body {
-        background: linear-gradient(-45deg, #000000, #a10404, #640303, #000000);
-        background-size: 400% 400%;
-        animation: gradient 10s ease infinite;
-      }
-
-      @keyframes gradient {
-        0% {
-          background-position: 0% 50%;
+        body {
+            background: linear-gradient(-45deg, #000000, #a10404, #640303, #000000);
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
         }
-        50% {
-          background-position: 100% 50%;
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
-        100% {
-          background-position: 0% 50%;
+
+        html, body {
+            height: 100%;
+            margin: 0;
         }
-      }
 
-      html,
-      body {
-        height: 100%;
-        margin: 0;
-      }
+        body {
+            background-color: rgb(42, 40, 40);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      body {
-        background-color: rgb(42, 40, 40);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+        .box {
+            margin-top: -65px;
+            display: flex;
+            gap: 25px;
+        }
 
-      .box {
-        margin-top: -65px;
-        display: flex;
-        gap: 25px;
-      }
+        img {
+            margin-top: -120px;
+            width: 30em;
+            display: block;
+        }
 
-      img {
-        margin-top: -120px;
-        width: 30em;
-        display: block;
-      }
+        .ret01 {
+            background-color: black;
+            width: 195px;
+            height: 270px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-      .ret01,
-      .ret02,
-      .ret03,
-      .ret04,
-      .ret05 {
-        background-color: black;
-        width: 195px;
-        height: 270px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: solid 5px;
-        box-shadow: 0 0 12px rgba(94, 92, 85, 0.4);
-      }
+        .dragao {
+            margin-top: 3px;
+            width: 85%;
+            height: auto;
+            object-fit: contain;
+        }
 
-      .dragao,
-      .mago,
-      .kuriboh,
-      .neos,
-      .calibre {
-        margin-top: 15px;
-        margin-left: 15px;
-        width: 85%;
-        height: auto;
-        object-fit: contain;
-      }
+        .mago {
+            margin-top: 15px;
+            margin-left: 15px;
+            width: 85%;
+            height: auto;
+            object-fit: contain;
+        }
 
+        .kuriboh {
+            margin-top: 15px;
+            margin-left: 15px;
+            width: 85%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .neos {
+            margin-top: 15px;
+            margin-left: 15px;
+            width: 85%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .calibre {
+            margin-top: 15px;
+            margin-left: 15px;
+            width: 85%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .ret01 {
+            background-color: black;
+            width: 195px;
+            height: 270px;
+        }
+
+        .ret02 {
+            background-color: black;
+            width: 195px;
+            height: 270px;
+        }
+
+        .ret03 {
+            background-color: black;
+            width: 195px;
+            height: 270px;
+        }
+
+        .ret04 {
+            background-color: black;
+            width: 195px;
+            height: 270px;
+        }
+
+        .ret05 {
+            background-color: black;
+            width: 195px;
+            height: 270px;
+        }
     </style>
-  </head>
-  <body>
+
+    <link rel="manifest" href="manifest.json">
+    <script0 src=" index.js"></script>
+</head>
+
+<body>
     <div class="container">
-      <img src="logo.png" alt="Logo" />
-      <div class="box">
-        <div class="ret01">
-          <img class="dragao" src="/PWA-FINAL/drgbranco.png" alt="Dragão Branco" />
-        </div>
+        <img src="logo.png" alt="Logo">
 
-        <div class="ret02">
-          <img class="kuriboh" src="/PWA-FINAL/kuriboh.jpeg" alt="Kuriboh" />
-        </div>
+        <div class="box">
+            <div class="ret01"
+                style="border: solid 5px;
+                       border-image: linear-gradient(45deg, #63615e, #fffacd, #63615e) 1;
+                       box-shadow: 0 0 12px rgba(94, 92, 85, 0.4);">
+                <img class="dragao" src="/PWA-FINAL/drgbranco.png" alt="Dragão Branco">
+            </div>
 
-        <div class="ret03">
-          <img class="calibre" src="/PWA-FINAL/calibregado.jpg" alt="Calibregado" />
-        </div>
+            <div class="ret02"
+                style="border: solid 5px;
+                       border-image: linear-gradient(45deg, #63615e, #fffacd, #63615e) 1;
+                       box-shadow: 0 0 12px rgba(94, 92, 85, 0.4);">
+                <img class="kuriboh" src="/PWA-FINAL/kuriboh.jpeg" alt="Kuriboh">
+            </div>
 
-        <div class="ret04">
-          <img class="neos" src="/PWA-FINAL/neos.webp" alt="Neos" />
-        </div>
+            <div class="ret03"
+                style="border: solid 5px;
+                       border-image: linear-gradient(45deg, #d4af37, #fffacd, #d4af37) 1;
+                       box-shadow: 0 0 12px rgba(255, 215, 0, 0.4);">
+                <img class="calibre" src="/PWA-FINAL/calibregado.jpg" alt="">
+            </div>
 
-        <div class="ret05">
-          <img class="mago" src="/PWA-FINAL/mago-negro.jpeg" alt="Mago Negro" />
+            <div class="ret04"
+                style="border: solid 5px;
+                       border-image: linear-gradient(45deg, #63615e, #fffacd, #63615e) 1;
+                       box-shadow: 0 0 12px rgba(94, 92, 85, 0.4);">
+                <img class="neos" src="/PWA-FINAL/neos.webp" alt="Neos, o HEROI elementar">
+            </div>
+
+            <div class="ret05"
+                style="border: solid 5px;
+                       border-image: linear-gradient(45deg, #63615e, #fffacd, #63615e) 1;
+                       box-shadow: 0 0 12px rgba(94, 92, 85, 0.4);">
+                <img class="mago" src="/PWA-FINAL/mago-negro.jpeg" alt="Mago-negro">
+            </div>
         </div>
-      </div>
     </div>
 
-    <div class="menu">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1
+    <div class="menu" style="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+             fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+    </div>
+</body>
+</html>
